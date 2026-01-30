@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroxAI - Your AI Friend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Sidebar for Chat History -->
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <button id="new-chat-btn" class="new-chat-btn">+ New Chat</button>
+            </div>
+            <div id="chat-list" class="chat-list">
+                <!-- Chat history items will be appended here -->
+            </div>
+        </div>
+
+        <!-- Main Chat Screen -->
+        <div id="main-content" class="main-content">
+            <header class="chat-header">
+                <button id="sidebar-toggle" class="sidebar-toggle">☰</button>
+                <div class="header-left">
+                    <span class="title">GroxAI</span>
+                </div>
+                <button id="theme-toggle" class="theme-btn">🌙</button>
+            </header>
+            <div id="chat-area" class="chat-area">
+                <!-- Messages will be appended here -->
+            </div>
+            <div class="input-container">
+                <div id="prompt-text" class="prompt-text">What are we doing today?</div>
+                <div class="input-bar">
+                    <input type="text" id="message-input" placeholder="Ask anything" maxlength="500">
+                    <input type="file" id="file-input" accept="image/*" style="display: none;">
+                    <button id="upload-btn" class="upload-btn">📎</button>
+                    <button id="send-btn" class="send-btn">➤</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <p id="delete-message"></p>
+            <div class="modal-buttons">
+                <button id="delete-confirm" class="delete-btn">Delete</button>
+                <button id="delete-cancel" class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
